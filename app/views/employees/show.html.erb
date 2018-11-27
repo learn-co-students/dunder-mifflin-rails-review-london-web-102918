@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Employee</title>
+  </head>
+  <body>
+    <h1><%= @employee.to_s %></h1>
+    <img src="<%= @employee.img_url%>" height="142" width="162" alt="<%= @employee.to_s %>">
+    <p><strong>Alias</strong>: <%= @employee.alias %></p>
+    <p><strong>Title</strong>: <%= @employee.title %></p>
+    <p><strong>Office</strong>: <%= @employee.office %></p>
+    <br>
+    <%= link_to "All Employees", employees_path %>
+  </body>
+</html>

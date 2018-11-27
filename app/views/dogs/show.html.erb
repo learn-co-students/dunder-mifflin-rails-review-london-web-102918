@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Good Dog</title>
+  </head>
+  <body>
+    <h1><%= @dog.name %></h1>
+    <p><strong>Breed</strong>: <%= @dog.breed %></p>
+    <p><strong>Age</strong>: <%= @dog.age %></p>
+    <p><strong>Employees</strong>: </p>
+    <ul>
+      <% @dog.employees.each do |e| %>
+        <li><%= link_to e.to_s, employee_path(e) %></li>
+        <% end %>
+    </ul>
+
+    <br>
+    <%= link_to "All Good Dogs", dogs_path %>
+  </body>
+</html>
