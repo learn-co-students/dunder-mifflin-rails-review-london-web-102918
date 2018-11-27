@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dog List</title>
+  </head>
+  <body>
+    <h1>Dog List</h1>
+    <ul>
+    <% @dogs.each do |d| %>
+    <li><%= link_to d.name, dog_path(d) %></li><br>
+    <% end %>
+    </ul>
+  </body>
+</html>
