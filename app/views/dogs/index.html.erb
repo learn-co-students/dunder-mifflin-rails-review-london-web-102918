@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dogs</title>
+  </head>
+  <body>
+
+    <h1>Dog List</h1>
+
+    <h3>Order by numer of employees:</h3>
+    <%= form_tag('/dogs', method: 'get') do %>
+      Ascending: <%= check_box_tag('order[ascending]')  %>
+      Descending: <%= check_box_tag('order[descending]')  %>
+      <%= submit_tag %>
+    <% end %>
+
+    <% @dogs.each do |d| %>
+    <ul>
+      <li><%= link_to d.name, dog_path(d) %></li>
+    </ul>
+    <% end %>
+
+  </body>
+</html>

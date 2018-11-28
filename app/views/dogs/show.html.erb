@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1><%= @dog.name %></h1>
+
+      <p>Name: <%= @dog.name %></p>
+      <p>Breed: <%= @dog.breed %></p>
+      <p>Age: <%= @dog.age %></p>
+      <p>Employees: </p>
+      <ul>
+        <% @dog.employees.each do |e| %>
+        <li><%= link_to e.name, employee_path(e) %></li>
+        <% end %>
+      </ul>
+
+  </body>
+</html>
