@@ -1,0 +1,10 @@
+<h2>List of Dogs</h2>
+
+<ul>
+<% @dogs.each do |d| %>
+<li>Name: <%= link_to d.name, d %><br>
+</li>
+<% end %>
+</ul>
+
+Bored of Employees? Take a look at the list of <%= link_to 'Employees', employees_path %> instead, if you like.

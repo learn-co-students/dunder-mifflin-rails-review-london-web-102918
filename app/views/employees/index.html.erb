@@ -1,0 +1,12 @@
+<h2>List of Employees</h2>
+
+<ul>
+<% @employees.each do |e| %>
+<li><%= link_to e.full_name, e %><br>
+</li>
+<% end %>
+</ul><br>
+
+Bored of Employees? Take a look at the list of <%= link_to 'Dogs', dogs_path %> instead, if you like.<br>
+
+Or perhaps you'd prefer to create a <%= link_to 'new Employee', new_employee_path %>?
