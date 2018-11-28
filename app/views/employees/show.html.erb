@@ -1,0 +1,13 @@
+<h2> Name: <%= @employee.full_name %> </h2>
+
+<% if @employee.img_url.start_with? 'http' %>
+  <%= image_tag @employee.img_url %>
+<% else %>
+  <%= image_tag 'http://www.costumeideasforkids.com/wp-content/uploads/2017/09/Pokemon-for-Adults-Costumes-1.png', width: "200" %>
+<% end %>
+
+<h3>Alias: <%= @employee.alias %><br>
+Title: <%= @employee.title %><br>
+Office: <%= @employee.office %><br></h3>
+
+<%= link_to 'Back to all Employees', employees_path %>
