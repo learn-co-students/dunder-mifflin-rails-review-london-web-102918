@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Employee List</title>
+  </head>
+  <body>
+    <h1>Employee List</h1>
+    <ul>
+    <% @employees.each do |e| %>
+    <li><%= link_to e.to_s, employee_path(e) %></li><br>
+    <% end %>
+    </ul>
+  </body>
+</html>
