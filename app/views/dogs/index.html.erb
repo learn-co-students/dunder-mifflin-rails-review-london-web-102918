@@ -1,0 +1,17 @@
+<h1>Dogs</h1>
+<hr>
+
+<h3>Order dogs by number of employees:</h3>
+<%= form_tag('/dogs', method: 'get') do %>
+  Ascending: <%= check_box_tag('order[ascending]') %>
+  Descending: <%= check_box_tag('order[descending]') %>
+  <%= submit_tag %>
+<% end %>
+
+<% @dogs.each do |dog| %>
+  <h4>Name:</h4>
+    <%= link_to dog.name, dog_path(dog) %>
+<% end %><br>
+
+<hr>
+<h3><%= link_to 'Click to see all employees', employees_path %></h3>
