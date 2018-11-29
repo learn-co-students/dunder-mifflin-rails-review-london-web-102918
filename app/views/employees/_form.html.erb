@@ -1,0 +1,33 @@
+<% if flash[:errors] %>
+  <% flash[:errors].each do |e| %>
+    <p style="color: orange;"><%= e %></p>
+  <% end %>
+<% else %>
+    <p>Yay, no errors</p>
+<% end %>
+
+
+<%= form_for(@employee) do |f| %>
+  <label>First name:</label><br>
+  <%= f.text_field :first_name %><br>
+
+  <label>Last name:</label><br>
+  <%= f.text_field :last_name %><br>
+
+  <label>Alias:</label><br>
+  <%= f.text_field :alias %><br>
+
+  <label>Title:</label><br>
+  <%= f.text_field :title %><br>
+
+  <label>Office:</label><br>
+  <%= f.text_field :office %><br>
+
+  <label>Image:</label><br>
+  <%= f.text_field :img_url %><br>
+
+  <%= f.collection_select :dog_id, @dogs, :id, :name %><br>
+
+  <%= f.submit %>
+
+<% end %>
