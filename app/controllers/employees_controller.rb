@@ -10,6 +10,7 @@ class EmployeesController < ApplicationController
   end
 
   def new
+    @dogs = Dog.all
     @employee = Employee.new
   end
 
@@ -21,6 +22,7 @@ class EmployeesController < ApplicationController
     else
       render :new
     end
+
   end
 
   def edit
@@ -29,7 +31,7 @@ class EmployeesController < ApplicationController
   def update
     @employee.update(employee_params)
     if @employee.save
-      redirect_to @empoyee
+      redirect_to @employee
     else
       render :edit
     end

@@ -11,5 +11,6 @@
     <li><%= link_to d.name, dog_path(d) %></li><br>
     <% end %>
     </ul>
+    <%= link_to "sort by employees", dogs_url({:name => "sort" })%>
   </body>
 </html>
